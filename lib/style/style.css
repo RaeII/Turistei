@@ -1,0 +1,482 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+*{  
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    border: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  
+}
+html,body,main{
+  max-width: 550px;
+  margin: auto;
+}
+body{
+  padding: 0 0 200px 0;
+  background: linear-gradient(128deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 53%, rgba(252,252,254,1) 60%, rgba(154,168,227,1) 100%);
+}
+.content{
+  display: none;
+  opacity: 0.3;
+  transition: 10s;
+}
+
+.content-block{
+  display: block !important;
+}
+
+.content-anime{
+  opacity: 1;
+}
+#blur{
+  width: 100%;
+}
+header{
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  max-width: 550px;
+  left: 50%;
+  top: 0;
+  transform: translate3d(-50%,0,0);
+  z-index: 999;
+  transition: 1.5s;
+}
+
+.back-header{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top:0;
+  left: 0;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.51) 0%, rgba(6, 28, 40, 0.44) 100%); 
+  opacity: 0;
+  transition: 1s;
+}
+
+.header-anime{
+ opacity: 1;
+}
+
+.container-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 550px;
+  margin: auto;
+}
+main{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 844px;
+    padding-top: 150px;
+    overflow: hidden;
+    background: linear-gradient(180deg, rgba(64,144,195,1) 0%, rgba(73,155,207,1) 25%, rgba(48,135,190,1) 53%, rgba(30,125,184,1) 100%); 
+}
+
+.logo{
+    width:auto;
+    margin: 10px 0;
+    max-height: 80px;
+    max-width: 100px;
+    height: auto;
+    margin-left: 10px;
+    z-index: 1;
+}
+
+/*--============================== menu resp ==========================--*/
+  .menu {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    padding: 0;
+    z-index: 2;
+    margin-right: 10px;
+  }
+  .line {
+    fill: none;
+    stroke: rgb(255, 255, 255);
+    stroke-width: 6;
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+      stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 0 15px #525252bd;
+  }
+  .line1 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+  }
+  .line2 {
+    stroke-dasharray: 60 60;
+    stroke-width: 6;
+  }
+  .line3 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+  }
+  .opened .line1 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+  }
+  .opened .line2 {
+    stroke-dasharray: 1 60;
+    stroke-dashoffset: -30;
+    stroke-width: 6;
+  }
+  .opened .line3 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+  }
+  /*--============================== menu resp transition ==========================--*/
+  .menu-resp{
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      top: 0;
+      right: -100vw !important;
+      padding-top: 100px;
+      background-color:rgba(0, 0, 0, 0.425) ;
+      overflow-x: scroll;
+      transition: 0.3s;
+      z-index: 999999;
+  }
+  .menu-resp-anime{
+      right: 0 !important;
+      z-index: 1;
+  }
+  .menu-resp nav ul{
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+  }
+  .menu-resp nav ul li{
+    padding: 5px;
+    margin: 5px;
+    font-size: 30px;
+    font-weight: 500;
+    color: #ffffff;
+    cursor: pointer;
+    list-style: none;
+  } 
+  
+/*--============================== menu resp ==========================--*/
+
+/*--============================== nuvem anime ==========================--*/
+@keyframes nuvem{
+  0%{
+ transform: translate3d(-60px, 50px,0);  
+  }
+
+  50%{
+ transform: translate3d(50vw, 50px,0);  
+  }
+
+  100%{
+ transform: translate3d(0px, 50px,0);  
+  }
+}
+@keyframes nuvem2{
+  0%{
+ transform: translate3d(20px, 300px,0);  
+  }
+
+  50%{
+ transform: translate3d(30vw, 300px,0);  
+  }
+
+  100%{
+ transform: translate3d(20px, 300px,0);  
+  }
+}
+
+  .nuvem{
+	  animation: nuvem;
+	  animation-duration: 250s;
+	  animation-timing-function:ease-in-out;
+	  animation-iteration-count: infinite;
+    position: absolute;
+    height: 250px;
+    width: auto;
+    opacity: 0.5;
+  }
+  .nuvem2{
+	  animation: nuvem2;
+	  animation-duration: 300s;
+	  animation-timing-function:ease-in-out;
+	  animation-iteration-count: infinite;
+    position: absolute;
+    height: 180px;
+    width: auto;
+    opacity: 0.3;
+  }
+/*--============================== nuvem anime ==========================--*/
+
+h1{ 
+    font-size: 60px !important;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    width: 90%;
+    margin: auto;
+    color: #f0f2dc;
+    line-height: 50px !important;
+    text-shadow: 15px 15px 10px #3333338e;
+}
+
+h1 strong{
+    font-family: 'Dancing Script', cursive;
+    width: 100%;
+    display: block;
+    line-height: 35px;
+}
+/*--============================== plane ==========================--*/
+
+@keyframes plane-anime{
+    0%{
+      transform: translate3d(0,0,0) scale(1);
+    }
+
+    100%{
+        transform: translate3d(40%,-130px,0) scale(2); 
+    }
+}
+.plane{
+    animation:  plane-anime;
+    animation-duration: 40s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    position: absolute;
+    left: -30%;
+    top:500px;
+    width:auto;
+    max-height: 300px;
+    max-width: 300px;
+    height: auto;
+    z-index: 1;
+}
+/*--============================== fim plane ==========================--*/
+
+/*--============================== destaques ==========================--*/
+#destaques{
+  background: linear-gradient(180deg, rgba(30,125,184,1) 16%, rgba(25,121,179,1) 47%, rgba(59,138,185,1) 72%, rgba(255,255,255,1) 100%); 
+  padding: 0 0 70px 0;
+}
+
+h2{
+  text-align: center;
+  color: #ffffff;
+  padding: 15px 0 30px 0 ;
+  font-size: 50px !important;
+}
+.container-destaques{
+  position:relative;
+  width:100%;
+}
+
+.trans-destaque{
+ transform: translate3d(0,-100px,0);
+ transition: 1.5s;
+ opacity: 0;
+}
+
+.destque-anime{
+  transform: translate3d(0,-200px,0);
+  opacity: 1 ;
+}
+
+@keyframes fundo-anime{
+  0%{
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100%{
+    -moz-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+  }
+}
+
+.destaques{
+   width: 100%;
+   height: 60vh;
+   background-position: center;
+   background-size: cover;
+   border-radius: 10px;
+   transition: 1s all;
+}
+
+.overf{
+  position: relative;
+  width: 90%;
+  height: 60vh;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.active .overf .destaques{
+  animation: fundo-anime;
+  animation-duration: 10s;
+  animation-timing-function:ease-in-out;
+  animation-iteration-count: infinite;
+  transition: 0s;
+}
+
+ .owl-item{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   transition: 0.4s;
+ }
+
+ .nome-cidade{
+   position: absolute;
+   width: 100%;
+   height: 25%;
+   left: 0;
+   bottom: 0;
+   background-color: rgba(0, 0, 0, 0.301);
+   color: rgb(255, 255, 255);
+   font-size: 1.5rem !important;
+   z-index: 9;
+   transform: translate3d(0, 25%, 0);
+   opacity: 0;
+   transition: 2s;
+   
+ }
+
+ .active .overf .nome-cidade{
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+ }
+
+/*--========================== fim destaques ==================--*/
+
+/*--============================== sobre ======================--*/
+#about{
+  padding: 70px 0 70px 0;
+  text-align: center;
+  transform: translate3d(0, -130px, 0);
+  opacity: 0;
+  transition: 1.5s;
+}
+
+.about-anime{
+  transform: translate3d(0, -190px, 0) !important;
+  opacity: 1 !important;
+}
+
+section .section-heading .back {
+  font-size: 70px !important;
+  font-weight: bolder;
+  opacity: 0.3;
+  position: absolute;
+  text-transform: uppercase;
+  top: -47px;
+  left: 50% !important;
+  transform: translate3d(-50%,0,0);
+  color: rgb(63, 63, 63);
+}
+
+section .section-heading {
+  text-align: center;
+	font-size: 48px;
+	margin-bottom: 15px !important;
+	margin-top: 29px;
+	position: relative;
+	text-transform: none;
+	z-index: 1;
+}
+
+section .section-heading{
+  width: 100%;
+}
+
+.text-about{
+  font-size: 25px;
+}
+
+/*--============================== fim sobre ==========================--*/
+
+/*--============================== galeria ==========================--*/
+#galeria{
+  transform: translate3d(0, -50px, 0);
+  opacity: 0;
+  transition: 1.5s;
+}
+h3{
+  text-align: center;
+  font-size: 40px !important;
+}
+.container-galeria{
+  width: 95%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 20px;
+  margin: auto;
+}
+
+.item-galeria{
+  width: calc(33.33% - 2px);
+  height: 200px;
+  background-color: rgb(139, 139, 139);
+  background-position: center;
+  background-size: cover;
+  margin: 1px;
+}
+
+.galeria-anime{
+  transform: translate3d(0, -130px, 0) !important;
+  opacity: 1 !important;
+}
+/*--============================== fim galeria ==========================--*/
+.load-container{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  z-index: 9999999999999 ;
+}
+.c-loader {
+  animation: is-rotating 1s infinite;
+  border: 6px solid #e5e5e5;
+  border-radius: 50%;
+  border-top-color: #1f1f1f;
+  height: 100px;
+  width: 100px;
+}
+
+@keyframes is-rotating {
+  to {
+    transform: rotate(1turn);
+  }
+}
+/*--===============Anime loading===============--*/
+
+/*--============================== recursos ==========================--*/
+
+.center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.border{
+  border-radius: 10px;
+}
+
+/*--============================== recursos ==========================--*/
+
+
