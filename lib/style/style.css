@@ -38,7 +38,7 @@ header{
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 110vw;
+  width: 100vw;
   max-width: 550px;
   left:50%;
   top: 0;
@@ -252,7 +252,7 @@ h1 strong{
     }
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 400px) {
   .plane{
     left: -30%;
   }
