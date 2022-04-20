@@ -38,9 +38,9 @@ header{
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100vw;
+  width: 110vw;
   max-width: 550px;
-  left: calc(50% - 1px);
+  left:50%;
   top: 0;
   transform: translate3d(-50%,0,0);
   z-index: 999;
@@ -49,7 +49,7 @@ header{
 }
 
 .header-anime{
-  height: 80px;
+  height: 65px;
  background-color: #ffffff;
 }
 
@@ -81,7 +81,7 @@ main{
 }
 
 .logo-anime{
-  transform: scale(0.85);
+  transform: scale(0.7);
 }
 
 /*--============================== menu resp ==========================--*/
@@ -93,6 +93,11 @@ main{
     padding: 0;
     z-index: 2;
     margin-right: 10px;
+    transition: 0.8s;
+  }
+
+  .menu-anime{
+    transform: scale(0.7);
   }
 
   .line {
@@ -106,7 +111,6 @@ main{
   }
   .line-anime{
     stroke: rgb(59, 59, 59);
-    transform: scale(0.85);
   }
   .line1 {
     stroke-dasharray: 60 207;
@@ -246,6 +250,12 @@ h1 strong{
     100%{
         transform: translate3d(40%,-130px,0) scale(2); 
     }
+}
+
+@media screen and (max-width: 380px) {
+  .plane{
+    left: -30%;
+  }
 }
 .plane{
     animation:  plane-anime;
